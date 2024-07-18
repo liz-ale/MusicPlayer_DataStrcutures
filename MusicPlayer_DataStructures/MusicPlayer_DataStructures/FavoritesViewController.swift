@@ -8,7 +8,7 @@
 import UIKit
 
 class FavoritesViewController: UITableViewController {
-    var favorites: Set<songStruct> = []
+    let albumManager = AlbumManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,12 @@ class FavoritesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favorites.count
+        return albumManager.favorites.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let favoriteSongs = Array(favorites)
+        let favoriteSongs = Array(albumManager.favorites)
         cell.textLabel?.text = "\(favoriteSongs[indexPath.row].nameSong) - \(favoriteSongs[indexPath.row].duration)"
         return cell
     }
