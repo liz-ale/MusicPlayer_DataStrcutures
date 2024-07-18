@@ -22,6 +22,7 @@
 		18CBEFA72C483FC90073FB9C /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBEFA62C483FC90073FB9C /* AlbumsViewController.swift */; };
 		18CBEFA92C48402D0073FB9C /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBEFA82C48402D0073FB9C /* SongsViewController.swift */; };
 		18CBEFAB2C4840650073FB9C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBEFAA2C4840650073FB9C /* FavoritesViewController.swift */; };
+		60555C272C48D42B0015A1B3 /* AlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60555C262C48D42B0015A1B3 /* AlbumManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		18CBEFA62C483FC90073FB9C /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		18CBEFA82C48402D0073FB9C /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		18CBEFAA2C4840650073FB9C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		60555C262C48D42B0015A1B3 /* AlbumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				18CBEFA62C483FC90073FB9C /* AlbumsViewController.swift */,
 				18CBEFA82C48402D0073FB9C /* SongsViewController.swift */,
 				18CBEFAA2C4840650073FB9C /* FavoritesViewController.swift */,
+				60555C262C48D42B0015A1B3 /* AlbumManager.swift */,
 			);
 			path = MusicPlayer_DataStructures;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				18CBEF752C483E630073FB9C /* ViewController.swift in Sources */,
 				18CBEFA12C483EA30073FB9C /* DataModel.swift in Sources */,
 				18CBEFA32C483EFE0073FB9C /* MainTabBarControllerViewController.swift in Sources */,
+				60555C272C48D42B0015A1B3 /* AlbumManager.swift in Sources */,
 				18CBEFA52C483F690073FB9C /* ArtistsViewController.swift in Sources */,
 				18CBEFA92C48402D0073FB9C /* SongsViewController.swift in Sources */,
 				18CBEF712C483E630073FB9C /* AppDelegate.swift in Sources */,

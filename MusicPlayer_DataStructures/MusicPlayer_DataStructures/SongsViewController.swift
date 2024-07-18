@@ -10,6 +10,7 @@ import UIKit
 class SongsViewController: UITableViewController {
     var songs: [songStruct] = []
     var favorites: Set<songStruct> = []
+    let albumManager = AlbumManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,9 @@ class SongsViewController: UITableViewController {
     }
         
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let favoriteAction = UIContextualAction(style: .normal, title: nil) { _, _, completion in
+        let favoriteAction = UIContextualAction(style: .normal, title: nil) {[unowned self] _, _, completion in
             self.favorites.insert(self.songs[indexPath.row])
+            self.albumManager.favorites.insert(self.songs[indexPath.row])
             completion(true)
         }
         favoriteAction.image = UIImage(systemName: "heart.circle.fill")
