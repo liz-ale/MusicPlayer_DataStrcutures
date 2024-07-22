@@ -28,8 +28,8 @@ final class SearchViewModel: ObservableObject {
             .assign(to: &$results)
         
         $filterText
-            .removeDuplicates()
             .throttle(for: 1.0, scheduler: RunLoop.main, latest: true)
+            .removeDuplicates()
             .compactMap {[weak self] text in
                 guard let self = self else { return [] }
                 
@@ -38,32 +38,22 @@ final class SearchViewModel: ObservableObject {
                 } else {
                     var filtered: [String] = []
                     
-                    // Artists
-                    filtered += self.results.filter { artist in
-                        artist.name.localizedCaseInsensitiveContains(text)
-                    }.compactMap { $0.getuidString() }
-                    
-                    // Albums
-                    filtered += self.results.map { artist in
-                        artist.albums.filter { album in
-                            album.title.localizedCaseInsensitiveContains(text)
+                    self.results.forEach { artist in
+                        if artist.name.localizedCaseInsensitiveContains(text) {
+                            filtered.append(artist.getuidString())
                         }
-                    }.reduce(into: []) { partialResult, albums in
-                        partialResult += albums
-                    }.compactMap { $0.getuidString() }
-                    
-                    // Songs
-                    filtered += self.results.map { artist in
-                        artist.albums.map { album in
-                            album.songs.filter { song in
-                                song.title.localizedCaseInsensitiveContains(text)
+                        artist.albums.forEach { album in
+                            if album.title.localizedCaseInsensitiveContains(text) {
+                                filtered.append(album.getuidString())
                             }
-                        }.reduce(into: []) { partialResult, songs in
-                            partialResult += songs
+                            album.songs.forEach { song in
+                                if song.title.localizedCaseInsensitiveContains(text) {
+                                    filtered.append(song.getuidString())
+                                }
+                            }
                         }
-                    }.reduce(into: []) { partialResult, songs in
-                        partialResult += songs
-                    }.compactMap { $0.getuidString() }
+                        
+                    }
                     
                     return filtered
                 }
