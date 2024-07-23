@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window.rootViewController = MainTabBarControllerViewController()
         self.window = window
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

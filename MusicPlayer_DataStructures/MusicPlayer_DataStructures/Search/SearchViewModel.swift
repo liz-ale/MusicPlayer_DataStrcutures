@@ -5,7 +5,7 @@
 //  Created by julian.garcia on 22/07/24.
 //
 
-import Foundation
+import UIKit
 
 final class SearchViewModel: ObservableObject {
     @Published private(set) var results: [Artist] = []
@@ -63,5 +63,13 @@ final class SearchViewModel: ObservableObject {
     
     func filterWith(text: String) {
         filterText = text
+    }
+    
+    func openSafariWith(url: String) {
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        UIApplication.shared.open(url)
     }
 }

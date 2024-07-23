@@ -100,6 +100,13 @@ class SearchViewController: UITableViewController {
         snapshot.appendItems(items)
         dataSource.apply(snapshot)
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "server_url") as? String  else {
+            return
+        }
+        viewModel.openSafariWith(url: (baseURL + viewModel.filteredResults[indexPath.row]))
+    }
 }
 
 extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
