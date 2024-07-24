@@ -36,7 +36,11 @@ class MainTabBarControllerViewController: UITabBarController {
         let favoritesVC = UINavigationController(rootViewController: FavoritesViewController())
         favoritesVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart"), tag: 2)
         
-        viewControllers = [artistsNavController, searchNavController, favoritesVC]
+        // Mapa
+        let mapVC = MapViewController()
+        mapVC.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), tag: 3)
+        
+        viewControllers = [artistsNavController, searchNavController, favoritesVC, mapVC]
     }
     
 }

@@ -30,6 +30,10 @@
 		604406732C4EBFEA000F404B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604406722C4EBFEA000F404B /* SearchViewController.swift */; };
 		604406752C4EC000000F404B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604406742C4EC000000F404B /* SearchViewModel.swift */; };
 		6044067A2C4ED79C000F404B /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604406792C4ED79C000F404B /* Filterable.swift */; };
+		60BFC3312C515C8800728406 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BFC3302C515C8800728406 /* MapViewController.swift */; };
+		60BFC3332C515C8F00728406 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BFC3322C515C8F00728406 /* MapViewModel.swift */; };
+		60BFC3352C517DD100728406 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BFC3342C517DD100728406 /* MapModel.swift */; };
+		60BFC3372C5190C300728406 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BFC3362C5190C300728406 /* MapDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		6051DBB22C5004C100BC3E74 /* QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QA.xcconfig; sourceTree = "<group>"; };
 		6051DBB32C5006D200BC3E74 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		6051DBB52C500F9A00BC3E74 /* QA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = QA.plist; sourceTree = "<group>"; };
+		60BFC3302C515C8800728406 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		60BFC3322C515C8F00728406 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		60BFC3342C517DD100728406 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		60BFC3362C5190C300728406 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +220,7 @@
 				186CD9842C49D43700198A34 /* Song */,
 				604406712C4EBFB0000F404B /* Search */,
 				186CD97E2C49CFE800198A34 /* FavoriteSong */,
+				60BFC32F2C515C6F00728406 /* Map */,
 				18CBEF7E2C483E640073FB9C /* Development.plist */,
 				6051DBB52C500F9A00BC3E74 /* QA.plist */,
 				6051DBB32C5006D200BC3E74 /* Development.xcconfig */,
@@ -253,6 +262,17 @@
 				604406792C4ED79C000F404B /* Filterable.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		60BFC32F2C515C6F00728406 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				60BFC3302C515C8800728406 /* MapViewController.swift */,
+				60BFC3362C5190C300728406 /* MapDetailViewController.swift */,
+				60BFC3322C515C8F00728406 /* MapViewModel.swift */,
+				60BFC3342C517DD100728406 /* MapModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,17 +409,21 @@
 				18CBEFAB2C4840650073FB9C /* FavoritesViewController.swift in Sources */,
 				18CBEFA12C483EA30073FB9C /* Artist.swift in Sources */,
 				186CD9892C4AC6B000198A34 /* ArtistInteractor.swift in Sources */,
+				60BFC3352C517DD100728406 /* MapModel.swift in Sources */,
 				18CBEFA32C483EFE0073FB9C /* MainTabBarControllerViewController.swift in Sources */,
 				186CD98B2C4ACD1A00198A34 /* ArtistsViewModel.swift in Sources */,
 				186CD9902C4AF48300198A34 /* SongsViewModel.swift in Sources */,
+				60BFC3312C515C8800728406 /* MapViewController.swift in Sources */,
 				6044067A2C4ED79C000F404B /* Filterable.swift in Sources */,
 				186CD9812C49D0B700198A34 /* Song.swift in Sources */,
 				18CBEFA52C483F690073FB9C /* ArtistsViewController.swift in Sources */,
+				60BFC3332C515C8F00728406 /* MapViewModel.swift in Sources */,
 				18CBEFA92C48402D0073FB9C /* SongsViewController.swift in Sources */,
 				604406732C4EBFEA000F404B /* SearchViewController.swift in Sources */,
 				186CD98D2C4ACE5100198A34 /* AlbumsViewModel.swift in Sources */,
 				18CBEF712C483E630073FB9C /* AppDelegate.swift in Sources */,
 				186CD9922C4AF5FB00198A34 /* FavoriteSongsViewModel.swift in Sources */,
+				60BFC3372C5190C300728406 /* MapDetailViewController.swift in Sources */,
 				604406752C4EC000000F404B /* SearchViewModel.swift in Sources */,
 				18CBEF732C483E630073FB9C /* SceneDelegate.swift in Sources */,
 				186CD9832C49D10400198A34 /* Album.swift in Sources */,
