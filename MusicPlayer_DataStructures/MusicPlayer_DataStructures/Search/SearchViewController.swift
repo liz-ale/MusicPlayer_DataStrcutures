@@ -102,10 +102,7 @@ class SearchViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "server_url") as? String  else {
-            return
-        }
-        viewModel.openSafariWith(url: (baseURL + viewModel.filteredResults[indexPath.row]))
+        viewModel.openSafariWith(url: viewModel.filteredResults[indexPath.row])
     }
 }
 

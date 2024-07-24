@@ -55,7 +55,7 @@ final class SearchViewModel: ObservableObject {
                         
                     }
                     
-                    return filtered
+                    return filtered.sorted()
                 }
             }
             .assign(to: &$filteredResults)
@@ -66,7 +66,8 @@ final class SearchViewModel: ObservableObject {
     }
     
     func openSafariWith(url: String) {
-        guard let url = URL(string: url) else {
+        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "server_url") as? String,
+              let url = URL(string: baseURL + url) else {
             return
         }
         
